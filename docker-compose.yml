@@ -1,4 +1,4 @@
-version: "2"
+version: '3.3'
 services:
   quassel-core:
     image: linuxserver/quassel-core
@@ -9,7 +9,7 @@ services:
       - TZ=NewZealand/Auckland
       - RUN_OPTS=--config-from-environment #optional
     volumes:
-      - </mnt/docker/quassel-core:/config
+      - /mnt/docker/quassel-core:/config
     ports:
       - 4242:4242
       - 113:10113 #optional
