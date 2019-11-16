@@ -14,3 +14,17 @@ services:
       - 4242:4242
       - 113:10113 #optional
     restart: unless-stopped
+  quassel-web:
+    image: linuxserver/quassel-web
+    container_name: quassel-web
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - QUASSEL_CORE=192.168.1.10
+      - QUASSEL_PORT=4242
+      - URL_BASE=/quassel #optional
+    volumes:
+      - <path to data>:/config
+    ports:
+      - 64080:64080
+    restart: unless-stopped
