@@ -7,7 +7,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=NewZealand/Auckland
-      - RUN_OPTS=--config-from-environment #optional
+#      - RUN_OPTS=--config-from-environment #optional
     volumes:
       - /mnt/docker/quassel-core:/config
     ports:
@@ -20,9 +20,9 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - QUASSEL_CORE=192.168.1.10
+      - QUASSEL_CORE=10.1.1.15
       - QUASSEL_PORT=4242
-      - URL_BASE=/quassel #optional
+#      - URL_BASE=/quassel #optional
     volumes:
       - /mnt/docker/quassel-web:/config
     ports:
