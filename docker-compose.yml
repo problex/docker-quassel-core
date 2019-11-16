@@ -24,7 +24,7 @@ services:
       - QUASSEL_PORT=4242
       - URL_BASE=/quassel #optional
     volumes:
-      - <path to data>:/config
+      - /mnt/docker/quassel-web:/config
     ports:
       - 64080:64080
     restart: unless-stopped
